@@ -16,19 +16,24 @@ elif rand == 'r':
     # Solving algorithm
 def solve(number):
     print(number)
+    # Counts iterations
+    iteration = 1
     while True:
         # Determines whether the number is odd or even
         if number % 2 == 0:
             # Divides by 2 then prints the output
             number = number/2
             print(int(number))
+            iteration = iteration+1
         else:
             # Multiplies by 3 and adds 1, then prints the output
             number = number*3
             number=number+1
             print(int(number))
+            iteration = iteration+1
             
         if number == 1:
+            print('Your number went through {0} interations.'.format(iteration))
             break
 
 solve(number)
